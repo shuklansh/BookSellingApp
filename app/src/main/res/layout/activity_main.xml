@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Themebackground"
+        android:elevation="0dp"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toolBarId"
+            android:minHeight="?attr/actionBarSize"
+            style="@style/Themebackground"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+    </com.google.android.material.appbar.AppBarLayout>
+        <!-- used to open different screens
+        (fragments, which will replace this framlayout) from navdrawer -->
+        <!-- instead of android:layout_marginTop="?actionBarSize" in framelayout,
+        just put the framelayout in appbarlayout so it is under the actionbar-->
+        <!--style="@style/colorFragment"-->
+        <FrameLayout
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/framLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+        <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        moves frame (which will later be replaced by fragment)
+below toolbar and adds functionality that it replaces toolbar on scroll down -->
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/menu_drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

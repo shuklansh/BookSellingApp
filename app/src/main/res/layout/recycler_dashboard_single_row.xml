@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- parentLayoutOfSingleRowLayout -->
+<!--    android:id="@+id/cardView"-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/llcontent"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="horizontal"
+    android:background="#1CFFFE"
+    android:weightSum="6">
+
+    <ImageView
+        android:layout_weight="1.7"
+        android:id="@+id/imgBookImage"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="13dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:padding="2dp"/>
+
+    <RelativeLayout
+
+        android:layout_weight="3.3"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name of the book"
+            android:padding="8dp"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/txtBookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBookName"
+            android:text="Name of the Author"
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/txtBookPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Rs. 299"
+            android:padding="8dp"
+            android:layout_below="@id/txtBookAuthor"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#357a38"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/txtBookRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="4.5"
+        android:textColor="#ffca28"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_ratings">
+
+    </TextView>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+    <!--The weight sum property is used to divide the layout into
+        different parts and then giving each layout a particular weight
+        gives it that amount of space on the screen-->
+
+
+    <!--Since each parent layout will have a specific weight, we need
+    not give any width to those layout-->
+
+
+    <!--Many times we see that texts have an image along with them to
+    their right or left. This is added with the help of the
+    drawableLeft (or drawableRight and so on) attribute-->
+
+
+    <!-- "_____________________________________________________" -->
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.imageview.ShapeableImageView
+           app:shapeAppearanceOverlay="@style/roundedImageView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/circularImage"
+            app:strokeWidth="3dp"
+            android:padding="2dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_book"
+            />
+        <TextView
+            android:id="@+id/bookName"
+            android:layout_toRightOf="@id/circularImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="List Item"
+            style="@style/Themetext"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/circularImage"
+            android:layout_below="@id/bookName"
+            android:id="@+id/nameOfAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Authorname"
+            style="@style/Themetext"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/Price"
+            style="@style/Themetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/nameOfAuthor"
+            android:layout_toRightOf="@id/circularImage"
+            android:padding="10dp"
+            android:text="price"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"/>
+
+    </RelativeLayout>-->

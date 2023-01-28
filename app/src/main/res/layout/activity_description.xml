@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.DescriptionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/Themebackground"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/toolbar" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llBookContent"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <ImageView
+                    android:id="@+id/imgBookImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/default_book_cover" />
+                <RelativeLayout
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:id="@+id/txtBookName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="@string/name_of_book" />
+
+                    <TextView
+                        android:id="@+id/txtBookAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtBookName"
+                        android:textSize="15sp"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:text="@string/name_of_the_author" />
+                    <TextView
+                        android:id="@+id/txtBookPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtBookAuthor"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:textColor="#26ae60"
+                        android:text="@string/price_of_book" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtBookRating"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="#EEC213"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_ratings"
+                    android:drawablePadding="2dp"
+                    android:text=" 4.5" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/llBookContent">
+
+                <TextView
+                    android:id="@+id/txtAboutBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="About the Book :"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/txtBookDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtAboutBook"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:layout_margin="8dp"
+                    android:text="Text book description" />
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnAddFav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Add to Favourites"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
+
+
+    <RelativeLayout
+        android:id="@+id/progressBarLayoutDesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+        <ProgressBar
+            android:id="@+id/progressBarDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".activity.DescriptionActivity">-->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        style="@style/Themebackground"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        />-->
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        tools:ignore="SpeakableTextPresentCheck">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/llcontent"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="6">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgBookImage"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@mipmap/ic_launcher" />-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_weight="3.3"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/txtBookName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Name of the book"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/txtBookAuthor"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/txtBookName"-->
+<!--                    android:text="Name of the Author"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textSize="15sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txtBookPrice"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:text="Rs. 299"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#357a38"/>-->
+<!--                </RelativeLayout>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/txtBookRating"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1.2"-->
+<!--                    android:drawablePadding="4dp"-->
+<!--                    android:padding="4dp"-->
+<!--                    android:text="4.5"-->
+<!--                    android:textColor="#ffca28"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:drawableLeftCompat="@drawable/ic_ratings">-->
+<!--                </TextView>-->
+<!--            </LinearLayout>-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/llcontent">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtAboutTheBookStatic"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="About the Book"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:padding="6dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_marginTop="4dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_below="@+id/txtAboutTheBookStatic"-->
+<!--                    android:id="@+id/txtBookDesc"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="6dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:text="infobook dummy txt"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_margin="10dp"/>-->
+<!--            </RelativeLayout>-->
+<!--        </RelativeLayout>-->
+<!--    </ScrollView>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/addToFavBtn"-->
+<!--        style="@style/Themebackground"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Add to favourties"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="19sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="TextContrastCheck" />-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#fff"-->
+<!--        android:id="@+id/progressLayout">-->
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </RelativeLayout>-->
+<!--</RelativeLayout>-->
